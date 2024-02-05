@@ -10,6 +10,13 @@ public class DepositManager : MonoBehaviour
 
     public event Action<int> OnDeposit;
 
+    public static DepositManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
