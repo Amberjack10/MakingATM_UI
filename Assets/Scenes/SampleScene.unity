@@ -327,7 +327,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126530911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389127080}
+        m_TargetAssemblyTypeName: DepositMenuController, Assembly-CSharp
+        m_MethodName: OnClickDepositButtons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &126530911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,7 +701,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 264192339}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389127080}
+        m_TargetAssemblyTypeName: DepositMenuController, Assembly-CSharp
+        m_MethodName: OnClickDepositButtons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &264192339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,7 +1822,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 955854862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389127080}
+        m_TargetAssemblyTypeName: DepositMenuController, Assembly-CSharp
+        m_MethodName: OnClickDepositButtons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &955854862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,6 +2410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1389127079}
+  - component: {fileID: 1389127080}
   m_Layer: 5
   m_Name: DepositMenu
   m_TagString: Untagged
@@ -2396,8 +2433,8 @@ RectTransform:
   - {fileID: 1694431431}
   - {fileID: 126530909}
   - {fileID: 264192337}
-  - {fileID: 1798278281}
   - {fileID: 955854860}
+  - {fileID: 1798278281}
   - {fileID: 1017794407}
   - {fileID: 625221010}
   m_Father: {fileID: 1218256253}
@@ -2408,6 +2445,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1389127080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389127078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942dc382225453d428aa4d7cdc701622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depositInputText: {fileID: 0}
+  depositButtons:
+  - {fileID: 1694431432}
+  - {fileID: 126530910}
+  - {fileID: 264192338}
+  - {fileID: 955854861}
+  - {fileID: 1798278282}
 --- !u!1 &1407756612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,7 +2821,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1694431433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389127080}
+        m_TargetAssemblyTypeName: DepositMenuController, Assembly-CSharp
+        m_MethodName: OnClickDepositButtons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1694431433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2887,7 +2955,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1798278283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389127080}
+        m_TargetAssemblyTypeName: DepositMenuController, Assembly-CSharp
+        m_MethodName: OnClickDepositButtons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1798278283
 MonoBehaviour:
   m_ObjectHideFlags: 0
