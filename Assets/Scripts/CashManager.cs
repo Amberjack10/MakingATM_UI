@@ -9,6 +9,8 @@ public class CashManager : MonoBehaviour
     [SerializeField] private Text userCashText;
     [SerializeField] private Text userBalanceText;
 
+    [SerializeField] private GameObject warningPopup;
+
     public static CashManager instance;
 
     private void Awake()
@@ -35,14 +37,21 @@ public class CashManager : MonoBehaviour
 
         if(leftoverCash < cash)
         {
-            Debug.Log("잔액 부족!");
-            return;
+            warningPopup.SetActive(true);
         }
-        // 현금 차감
-        leftoverCash -= cash;
-        userCashText.text = leftoverCash.ToString();
-        // 잔액 입금
-        userBalance += cash;
-        userBalanceText.text = userBalance.ToString();
+        else
+        {
+            // 현금 차감
+            leftoverCash -= cash;
+            userCashText.text = leftoverCash.ToString();
+            // 잔액 입금
+            userBalance += cash;
+            userBalanceText.text = userBalance.ToString();
+        }
+    }
+
+    public void OnClickWarningPopupOkButton()
+    {
+        warningPopup.SetActive(false);
     }
 }
