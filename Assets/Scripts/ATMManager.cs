@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CashManager : MonoBehaviour
+public class ATMManager : MonoBehaviour
 {
     [SerializeField] private Text userCashText;
     [SerializeField] private Text userBalanceText;
 
     [SerializeField] private GameObject warningPopup;
 
-    public static CashManager instance;
+    public static ATMManager instance;
 
     private void Awake()
     {
