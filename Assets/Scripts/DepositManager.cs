@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DepositManager : MonoBehaviour
 {
+    [SerializeField] private GameObject depositMenu;
     [SerializeField] private Text depositInputText;
 
     public event Action<int> OnDeposit;
@@ -33,7 +34,7 @@ public class DepositManager : MonoBehaviour
     {
         if(index == 4)
         {
-            gameObject.SetActive(false);
+            depositMenu.SetActive(false);
             return;
         }
         else
