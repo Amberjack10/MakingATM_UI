@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DepositManager : MonoBehaviour
+public class WithdrawManager : MonoBehaviour
 {
-    [SerializeField] private GameObject depositMenu;
-    [SerializeField] private Text depositInputText;
+    [SerializeField] private GameObject withdrawMenu;
+    [SerializeField] private Text withdrawInputText;
 
-    public event Action<int> OnDeposit;
+    public event Action<int> OnWithdraw;
 
-    public static DepositManager instance;
+    public static WithdrawManager instance;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class DepositManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        depositMenu.SetActive(false);
+        withdrawMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,11 +30,11 @@ public class DepositManager : MonoBehaviour
         
     }
 
-    public void OnClickDepositButtons(int index)
+    public void OnClickWithdrawButtons(int index)
     {
-        if(index == 4)
+        if (index == 4)
         {
-            depositMenu.SetActive(false);
+            withdrawMenu.SetActive(false);
             ATMManager.instance.MainMenu.SetActive(true);
             return;
         }
@@ -45,14 +45,14 @@ public class DepositManager : MonoBehaviour
                 case 0: index = 10000; break;
                 case 1: index = 30000; break;
                 case 2: index = 50000; break;
-                case 3: 
-                    if(!int.TryParse(depositInputText.text, out index))
+                case 3:
+                    if (!int.TryParse(withdrawInputText.text, out index))
                     {
                         return;
                     }
                     break;
             }
-            OnDeposit?.Invoke(index);
+            OnWithdraw?.Invoke(index);
         }
     }
 }

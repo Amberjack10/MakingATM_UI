@@ -9,6 +9,9 @@ public class ATMManager : MonoBehaviour
     [SerializeField] private Text userCashText;
     [SerializeField] private Text userBalanceText;
 
+    public GameObject MainMenu;
+    public GameObject depositMenu;
+    public GameObject withdrawMenu;
     [SerializeField] private GameObject warningPopup;
 
     public static ATMManager instance;
@@ -22,6 +25,7 @@ public class ATMManager : MonoBehaviour
     void Start()
     {
         DepositManager.instance.OnDeposit += DepositCashToBalance;
+        WithdrawManager.instance.OnWithdraw += WithdrawBalanceToCash;
     }
 
     // Update is called once per frame
@@ -47,6 +51,26 @@ public class ATMManager : MonoBehaviour
             // 잔액 입금
             userBalance += cash;
             userBalanceText.text = userBalance.ToString();
+        }
+    }
+
+    private void WithdrawBalanceToCash(int balance)
+    {
+        int leftoverCash = int.Parse(userCashText.text.ToString());
+        int userBalance = int.Parse(userBalanceText.text.ToString());
+
+        if (userBalance < balance)
+        {
+            warningPopup.SetActive(true);
+        }
+        else
+        {
+            // 잔액 차감
+            userBalance -= balance;
+            userBalanceText.text = userBalance.ToString();
+            // 현금 출금
+            leftoverCash += balance;
+            userCashText.text = leftoverCash.ToString();
         }
     }
 
