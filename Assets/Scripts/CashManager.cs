@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CashManager : MonoBehaviour
 {
     [SerializeField] private Text userCashText;
-    [SerializeField] private Text userBanlanceText;
+    [SerializeField] private Text userBalanceText;
 
     public static CashManager instance;
 
@@ -19,7 +19,7 @@ public class CashManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DepositManager.instance.OnDeposit += DepositCashToBanlance;
+        DepositManager.instance.OnDeposit += DepositCashToBalance;
     }
 
     // Update is called once per frame
@@ -28,10 +28,10 @@ public class CashManager : MonoBehaviour
         
     }
 
-    private void DepositCashToBanlance(int cash)
+    private void DepositCashToBalance(int cash)
     {
         int leftoverCash = int.Parse(userCashText.text.ToString());
-        int userBanlance = int.Parse(userBanlanceText.text.ToString());
+        int userBalance = int.Parse(userBalanceText.text.ToString());
 
         if(leftoverCash < cash)
         {
@@ -42,7 +42,7 @@ public class CashManager : MonoBehaviour
         leftoverCash -= cash;
         userCashText.text = leftoverCash.ToString();
         // ÀÜ¾× ÀÔ±Ý
-        userBanlance += cash;
-        userBanlanceText.text = userBanlance.ToString();
+        userBalance += cash;
+        userBalanceText.text = userBalance.ToString();
     }
 }
